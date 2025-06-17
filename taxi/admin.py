@@ -16,15 +16,18 @@ class DriverAdmin(admin.ModelAdmin):
     fieldsets = (
         (None, {"fields": ("username", "password")}),
         ("Personal info", {"fields": ("first_name", "last_name", "email")}),
-        ("Permissions", {"fields": ("is_active", "is_staff", "is_superuser")}),
-        ("Additional info", {"fields": ("license_number",)}),  # Додано license_number
+        (
+            "Permissions",
+            {"fields": ("is_active", "is_staff", "is_superuser")}
+        ),
+        ("Additional info", {"fields": ("license_number",)}),
     )
     add_fieldsets = (
         (None, {
             "classes": ("wide",),
             "fields": ("username", "password1", "password2"),
         }),
-        ("Additional info", {"fields": ("license_number",)}),  # Додано license_number
+        ("Additional info", {"fields": ("license_number",)}),
     )
 
 
